@@ -17,10 +17,11 @@ public class GreenChannelInterceptor implements ChannelInterceptor {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(message);
         log.info("#### preSend message : {}", message);
         if (StompCommand.CONNECT.equals(headerAccessor.getCommand())) {
-
             log.info("#### preSend Authorization : {}", headerAccessor.getNativeHeader("Authorization"));
             log.info("connected ");
-            // TODO -  JWT 검증
+            /**
+             * TODO 검증
+             */
         }
         return message;
     }

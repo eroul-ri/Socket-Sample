@@ -31,7 +31,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void configureMessageBroker(MessageBrokerRegistry messageBrokerRegistry) {
         messageBrokerRegistry.setApplicationDestinationPrefixes("/publish");
-        messageBrokerRegistry.enableSimpleBroker("/subscribe/green", "/subscribe/green/sys");
+        messageBrokerRegistry.enableSimpleBroker("/subscribe");
     }
 
     @Override
